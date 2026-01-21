@@ -22,6 +22,7 @@ import {
   techPatterns,
   themsFightinHerds,
   wrapMechs,
+  uni,
 } from "../data/index";
 
 const InputContext = createContext();
@@ -44,6 +45,7 @@ export const InputProvider = ({ children }) => {
     blazblue,
     persona,
     themsFightinHerds,
+    uni,
   ]);
 
   const [gameInputs, setGameInputs] = useState(() => {
@@ -137,11 +139,11 @@ export const InputProvider = ({ children }) => {
 
   function createRegex(list) {
     // create regexes based on movelist file
-    const regexes = list.map((e) => {
-      if (!e) return "";
-      return e.regex;
-    });
-    if (!regexes.length > 0) return;
+    const regexes = list
+      .filter((e) => e && e.regex)
+      .map((e) => e.regex);
+    
+    if (regexes.length === 0) return;
 
     // return a unique regex based on the regexes
     return new RegExp(

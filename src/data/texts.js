@@ -9,6 +9,7 @@ import {
   streetFighter,
   techPatterns,
   themsFightinHerds,
+  uni,
 } from "../data/index";
 
 import { wrapMechs } from "../data/wrapMechs.js";
@@ -51,6 +52,7 @@ export const texts = [
       blazblue,
       persona,
       themsFightinHerds,
+      uni,
     ],
   },
 ];

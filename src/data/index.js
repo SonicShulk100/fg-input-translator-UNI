@@ -53,6 +53,8 @@ export { kingOfFighters } from "./games/kingOfFighters";
 export { persona } from "./games/persona";
 export { streetFighter } from "./games/streetFighter";
 export { themsFightinHerds } from "./games/themsFightinHerds";
+//UnderNight In-Birth
+export { uni } from "./games/uni";
 export { moveInputs } from "./moveInputs";
 export { specialInputs } from "./specialInputs";
 export { techPatterns } from "./techPatterns";
